@@ -1,6 +1,6 @@
 let clicksToMake = 20;
 let clickCount = 0;
- 
+
 function clickButton() {
     const button = document.querySelector('.text-right .v-btn.v-btn--icon.v-btn--variant-text');  
 
@@ -11,12 +11,12 @@ function clickButton() {
 
         if (clickCount >= clicksToMake) { 
             clearInterval(clickInterval); 
-            console.log('Clicking stopped after 100 clicks.');
-            console.log(`Clicking stopped after ${clicksToMake} clicks.`); 
+            console.log(`Clicking stopped after ${clicksToMake} clicks.`);
         }
     } else {
-        console.log('Button not found.');
+        console.log('Button not found. Stopping execution.');
+        clearInterval(clickInterval);
     }
 }
 
-const clickInterval = setInterval(clickButton, 2000);
+const clickInterval = setInterval(clickButton, 1000);
