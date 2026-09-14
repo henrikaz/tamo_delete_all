@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Tamo Inbox Cleaner",
+  "version": "1.0",
+  "description": "Repeatedly clicks the delete button in the Tamo portal inbox to clear old messages.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://*.tamo.lt/*"],
+  "action": {},
+  "background": {
+    "service_worker": "background.js"
+  }
+}
